@@ -1,6 +1,27 @@
 #include<iostream>
 #include "second.cpp"
 #include "third.cpp"
+#include "fourth.cpp"
+#include "digrams_he.cpp"
+#include "digrams_th.cpp"
+#include "digrams_er.cpp"
+#include "digrams_in.cpp"
+#include "trigrams_and.cpp"
+#include "trigrams_edt.cpp"
+#include "trigrams_ent.cpp"
+#include "trigrams_for.cpp"
+#include "trigrams_has.cpp"
+#include "trigrams_ing.cpp"
+#include "trigrams_ion.cpp"
+#include "trigrams_men.cpp"
+#include "trigrams_nce.cpp"
+#include "trigrams_nde.cpp"
+#include "trigrams_oft.cpp"
+#include "trigrams_sth.cpp"
+#include "trigrams_tha.cpp"
+#include "trigrams_the.cpp"
+#include "trigrams_tio.cpp"
+#include "trigrams_tis.cpp"
 #include<cstdlib>
 #include<math.h>
 #include<random>
@@ -16,15 +37,29 @@ int main()
 {
     second();
     third();
+    fourth();
+    digram_he();
+    digram_th();
+    digram_er();
+    digram_in();
+    trigrams_and();
+    trigrams_edt();
+    trigrams_ent();
+    trigrams_for();
+    trigrams_has();
+    trigrams_ing();
+    trigrams_ion();
+    trigrams_men();
+    trigrams_nce();
+    trigrams_nde();
+    trigrams_oft();
+    trigrams_sth();
+    trigrams_tha();
+    trigrams_the();
+    trigrams_tio();
+    trigrams_tis();
     ifstream stream;
-    stream.open("second.cpp");
-    stream.close();
-
     int br=0, brn=0, t;
-    // common trigrams and digrams / after successfuly starting the code adding more digrams and trigrams from desktop
-   int trigrams[] = {'the', 'and', 'tha', 'ent', 'ing', 'ion', 'tio', 'for', 'nde', 'has', 'nce', 'edt', 'tis', 'oft', 'sth', 'men'};
-   int digrams[] = {'th', 'he', 'in', 'er'};
-   int offset=trigrams[0];
 
    int BONUS_FOR_PRINTABLE=1;
    int BONUS_FOR_LOWERCASE=3;
@@ -33,9 +68,6 @@ int main()
    int BONUS_FOR_TRIGRAM=16;
    int PENALTY_FOR_DIGIT=-10;
    int fitness=0;
-
-   //char p[] = {'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm', '\0'};
-
 
    //opening the two chipers //deep copy might be needed
       /*                  std::string line_;
@@ -77,16 +109,7 @@ int main()
  */
     // TUNNING //
 /*
-const int BONUS_FOR_PRINTABLE=1;
-const int BONUS_FOR_LOWERCASE=3;      //MIGHT BE MOVED UPPER DUE TO DECLARATION
-const int BONUS_FOR_SPACE=8;
-const int BONUS_FOR_DIGRAM=8;
-const int BONUS_FOR_TRIGRAM=16;
-const int PENALTY_FOR_DIGIT=-10;
- int fitness=0;
 
-char p[] = {'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm', '\0'};
-*/
 /*
 if(p==file2_)
     {
@@ -148,7 +171,7 @@ for(p[] in file2_("chipher2.txt"))
      //experiment failed for now.. needed tunning
     */
     
-    cout<<endl<<"wtf bruh ivan's laptop is down?"<<endl;
+    cout<<endl<<"for now"<<endl;
 
 
 
