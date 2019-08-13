@@ -1,7 +1,8 @@
 #include<iostream>
-#include "second.cpp"
-#include "third.cpp"
-#include "fourth.cpp"
+#include "alpha.cpp"
+#include "numbers.cpp"
+#include "spaces.cpp"
+#include "isprintable.cpp"
 #include "digrams_he.cpp"
 #include "digrams_th.cpp"
 #include "digrams_er.cpp"
@@ -35,40 +36,129 @@ const int KEYLEN=17;
 using namespace std;
 int main()
 {
-    second();
-    third();
-    fourth();
+   int BONUS_FOR_SPACE=8;
+   int space_fitness=0;
+   int all_in_fitness=0;
+    //TUNNING//
+    alpha();
+    {
+        
+    }
+    numbers();
+    {
+        
+    }
+    spaces();
+    {
+        ifstream stream;
+        std::ifstream file("spacing fitness.txt");
+        std::string str;
+        std::string file_contents;
+        while (std::getline(file, str))
+        {
+            //space_fitness=space_fitness+file_contents;
+             file_contents += str;
+             file_contents.push_back('\n');
+            
+        }
+        file_contents += BONUS_FOR_SPACE;
+        cout<<endl<<"spacing fitness = "<<file_contents<<endl;
+    }
+    print();
+    {
+        
+    }
     digram_he();
+    {
+        
+    }
     digram_th();
+    {
+        
+    }
     digram_er();
+    {
+        
+    }
     digram_in();
+    {
+        
+    }
     trigrams_and();
+    {
+        
+    }
     trigrams_edt();
+    {
+        
+    }
     trigrams_ent();
+    {
+        
+    }
     trigrams_for();
+    {
+        
+    }
     trigrams_has();
+    {
+        
+    }
     trigrams_ing();
+    {
+        
+    }
     trigrams_ion();
+    {
+        
+    }
     trigrams_men();
+    {
+        
+    }
     trigrams_nce();
+    {
+        
+    }
     trigrams_nde();
+    {
+        
+    }
     trigrams_oft();
+    {
+        
+    }
     trigrams_sth();
+    {
+        
+    }
     trigrams_tha();
+    {
+        
+    }
     trigrams_the();
+    {
+        
+    }
     trigrams_tio();
+    {
+        
+    }
     trigrams_tis();
-    ifstream stream;
+    {
+        
+    }
     int br=0, brn=0, t;
 
    int BONUS_FOR_PRINTABLE=1;
    int BONUS_FOR_LOWERCASE=3;
-   int BONUS_FOR_SPACE=8;
    int BONUS_FOR_DIGRAM=8;
    int BONUS_FOR_TRIGRAM=16;
    int PENALTY_FOR_DIGIT=-10;
-   int fitness=0;
-
+   //ifstream stream;
+  // stream.open("numbers.cpp");
+//   cout<<endl<<"fitness cifri4ki"<<counterfornumbers<<endl;
+    //fitness=fitness+counterfornumbers
    //opening the two chipers //deep copy might be needed
       /*                  std::string line_;
                         ifstream file_("chipher1.txt");
@@ -106,46 +196,6 @@ int main()
 
         std::cin.get();
 
- */
-    // TUNNING //
-/*
-
-/*
-if(p==file2_)
-    {
-        fitness=fitness+BONUS_FOR_LOWERCASE;
-    }
-else
-    {
-        cout<<endl<<"wrong"<<endl;
-    }
-
-
-for(p[] in file2_("chipher2.txt"))
-    {
-
-
-        if p in "qwertyuiopasdfghjklzxcvbnm":
-            fitness=fitness+BONUS_FOR_LOWERCASE;
-        if p in "0123456789":
-            fitness=fitness+PENALTY_FOR_DIGIT
-        p=ord(p)
-        if (p>=0x20 and p<=0x7E) or p==0xA or p==0xD:
-            fitness=fitness+BONUS_FOR_PRINTABLE
-
-    for digram in digrams:
-        fitness=fitness + plain.count(digram)*BONUS_FOR_DIGRAM
-
-    for trigram in trigrams:
-        fitness=fitness + plain.count(trigram)*BONUS_FOR_TRIGRAM
-
-    fitness=fitness + plain.count(" ")*BONUS_FOR_SPACE
-    }
-    cout<<endl<<"fitness = "<<fitness<<endl;
-*/
-
-//    cout<<"pepe is p = "<<p<<endl;
-                                        //cout<<"pepe is lower = "<<fitness<<endl;
 
 
  // TESTING //
@@ -174,6 +224,6 @@ for(p[] in file2_("chipher2.txt"))
     cout<<endl<<"for now"<<endl;
 
 
-
+     system("PAUSE");
      return 0;
 }

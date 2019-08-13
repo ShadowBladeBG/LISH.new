@@ -12,10 +12,10 @@
 #include <ctype.h>
 int countPrint(char printable);
 //int third(int argc, char *argv[]);
-int main()
+int print()
 {
     char printable;
-    std::cout<<" Numbers\t\tHow many times"<<std::endl;
+    std::cout<<" Printables\t\tHow many times"<<std::endl;
     std::ifstream isprint;
     int counterforprintable = 0;
     
